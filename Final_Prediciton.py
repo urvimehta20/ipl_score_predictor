@@ -67,7 +67,6 @@ runs=st.number_input('Current Team Score')
 rl5=st.number_input("Runs last 5 overs")
 wl5=st.number_input("Wickets last 5 overs")
 
-
 if st.button("Predict"):
             output=int(model.predict([[bat_team,bowl_team,overs,wickets,runs,rl5,wl5]])[0])
             st.write("Score may range from "+str(output-10) )
